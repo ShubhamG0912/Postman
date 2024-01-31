@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "0d5610bd-a87f-46e2-8ec5-5e9fd2c2a6e3",
+		"name": "Jan9_PassValue",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32156809",
+		"_collection_link": "https://orange-space-645152.postman.co/workspace/Jan8_API-Testing~2d0f1742-0946-42e8-a0d5-0861f8b36c54/collection/32156809-0d5610bd-a87f-46e2-8ec5-5e9fd2c2a6e3?action=share&source=collection_link&creator=32156809"
+	},
+	"item": [
+		{
+			"name": "New Request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test('Validate the Employee Data',function(){\r",
+							"    var jdata= JSON.parse(responseBody);\r",
+							"    pm.expect(Number(jdata.data[5].id)).to.eql(Number(pm.environment.get(\"id\")));\r",
+							"\r",
+							"\r",
+							"pm.expect(jdata.data[5].email).to.eql(pm.environment.get(\"email\"));\r",
+							"\r",
+							"pm.expect(jdata.data[5].first_name).to.eql(pm.environment.get(\"first_name\"));\r",
+							"pm.expect(jdata.data[5].last_name).to.eql(pm.environment.get(\"last_name\"));\r",
+							"//pm.expect(jdata.data[5].avatar).to.eql(pm.environment.get(\"avatar\"));\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{Url}}",
+					"host": [
+						"{{Url}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

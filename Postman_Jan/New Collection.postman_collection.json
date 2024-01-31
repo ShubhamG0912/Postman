@@ -1,0 +1,50 @@
+{
+	"info": {
+		"_postman_id": "363aeb78-bb28-4504-b88a-06b91e19f926",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32156809",
+		"_collection_link": "https://orange-space-645152.postman.co/workspace/Jan8_API-Testing~2d0f1742-0946-42e8-a0d5-0861f8b36c54/collection/32156809-363aeb78-bb28-4504-b88a-06b91e19f926?action=share&source=collection_link&creator=32156809"
+	},
+	"item": [
+		{
+			"name": "Jan9_Auth",
+			"item": [
+				{
+					"name": "Auth",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "password",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "postman",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://postman-echo.com/basic-auth",
+							"protocol": "https",
+							"host": [
+								"postman-echo",
+								"com"
+							],
+							"path": [
+								"basic-auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
